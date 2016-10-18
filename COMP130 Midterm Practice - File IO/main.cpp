@@ -7,9 +7,30 @@
 //
 
 #include <iostream>
+#include <fstream>
+#include <string>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+
+int main() {
+    
+    ofstream iofile;
+    
+    iofile.open("/Users/ax/test_fileio.txt");
+    
+    iofile << "hello der";
+    
+    iofile.close();
+
+    ifstream inputfile;
+    
+    inputfile.open("/Users/ax/test_fileio.txt");
+    
+    string inputstr = "";
+    
+    getline(cin, inputstr);
+    
+    cout << inputstr << endl;
+    
     return 0;
 }
